@@ -1,17 +1,17 @@
 <template lang="pug">
-.container
-  .teachers
-    .teacher(v-for="teacher in teachers", :key="teacher.slug")
-      .image
-        img(:src="teacher.image")
-      .intro
-        h3.name {{ teacher.name }}
-        .experience
-          ul(v-for="experience in teacher.experiences", :key="experience")
-            li
-              font-awesome-icon(icon="award")
-              span.experience {{ experience }}
-  .cutter
+  .container
+    .teachers
+      .teacher(v-for="teacher in teachers", :key="teacher.slug")
+        .image
+          img(:src="teacher.image")
+        .intro
+          h3.name {{ teacher.name }}
+          .experience
+            ul(v-for="experience in teacher.experiences", :key="experience")
+              li
+                font-awesome-icon(icon="award")
+                span.experience {{ experience }}
+    .cutter
 </template>
 
 <script>
@@ -33,14 +33,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .container {
-  padding-top: $nav-header-space;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  @include with-mobile {
-    padding-top: $mobile-nav-header-space;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
   h1.title {
     color: #ffe300;
     text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,

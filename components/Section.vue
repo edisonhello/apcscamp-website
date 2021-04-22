@@ -1,14 +1,22 @@
 <template lang="pug">
   div
     a.pageAnchor(:id="sectionId")
-    slot
+    section-block
+      template(v-slot:title) {{ sectionName }}
+      template
+        slot
 </template>
 
 <script>
 import Vue from 'vue';
 export default Vue.extend({
   props: {
-    sectionId: { }
+    sectionId: { 
+      default: '',
+    },
+    sectionName: { 
+      default: '',
+    },
   }
 });
 </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-.container
+.outer-container
   .banner
     banner
   nuxt-section-block(
@@ -10,20 +10,25 @@
     :key="article.id"
   )
 
-  Section(:sectionId="\"schedule\"")
+  Section(:sectionId="\"schedule\"" :sectionName="\"活動日程\"")
     template
       Schedule
 
-  Section(:sectionId="\"courses\"")
+  Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
+    template
+      Teachers
+
+  Section(:sectionId="\"courses\"" :sectionName="\"課程安排\"")
     template
       Courses
 </template>
 
 <script>
 import Vue from "vue";
-import Schedule from "@/components/content/Schedule";
-import Courses from "@/components/content/Courses";
 import Section from '@/components/Section';
+import Courses from "@/components/content/Courses";
+import Schedule from "@/components/content/Schedule";
+import Teachers from "@/components/content/Teachers";
 
 export default Vue.extend({
   head: {
@@ -46,7 +51,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.container {
+.outer-container {
   padding-top: $nav-header-height + 20px;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -54,9 +59,6 @@ export default Vue.extend({
     padding-top: $mobile-nav-header-space;
     padding-left: 5vw;
     padding-right: 5vw;
-  }
-  .cutter {
-    height: 1px;
   }
 }
 </style>
