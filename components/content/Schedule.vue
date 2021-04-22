@@ -1,9 +1,9 @@
 <template lang="pug">
-  section-block
+  section-block(id="schedule")
     template(v-slot:title) 活動日程
     template
       .container
-        .dates(id="schedule-table")
+        .dates
           table
               tr
                 th

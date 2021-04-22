@@ -17,9 +17,6 @@ export default Vue.extend({
       default: false,
     },
   },
-  mounted: function() {
-    console.log('bor', this["contentShadow"]);
-  }
 });
 </script>
 

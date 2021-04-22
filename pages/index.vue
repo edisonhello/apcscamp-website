@@ -9,15 +9,21 @@
     :date="true",
     :key="article.id"
   )
-  .cutter
-  Schedule(id="schedule")
-  Courses(id="course")
+
+  Section(:sectionId="\"schedule\"")
+    template
+      Schedule
+
+  Section(:sectionId="\"courses\"")
+    template
+      Courses
 </template>
 
 <script>
 import Vue from "vue";
 import Schedule from "@/components/content/Schedule";
 import Courses from "@/components/content/Courses";
+import Section from '@/components/Section';
 
 export default Vue.extend({
   head: {
@@ -32,6 +38,7 @@ export default Vue.extend({
     this.news = await this.$content("news").sortBy("prio", "desc").sortBy("createdAt", "desc").fetch();
   },
   components: {
+    Section, 
     Schedule,
     Courses,
   }

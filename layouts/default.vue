@@ -20,6 +20,10 @@ export default Vue.extend({
 body {
   font-family: "Noto Sans TC", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 </style>
 
 <style lang="scss" scoped>
