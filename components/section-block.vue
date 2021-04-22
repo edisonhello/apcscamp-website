@@ -4,7 +4,7 @@
     h2
       font-awesome-icon(icon="terminal", class="title-icon")
       slot(name="title")
-  .content
+  .content(:class="{ \"content-shadow\": contentShadow }")
     slot
 </template>
 
@@ -12,6 +12,14 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
+  props: {
+    contentShadow: {
+      default: false,
+    },
+  },
+  mounted: function() {
+    console.log('bor', this["contentShadow"]);
+  }
 });
 </script>
 

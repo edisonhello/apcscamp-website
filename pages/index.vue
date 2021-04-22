@@ -10,10 +10,15 @@
     :key="article.id"
   )
   .cutter
+  Schedule(id="schedule")
+  Courses(id="course")
 </template>
 
 <script>
 import Vue from "vue";
+import Schedule from "@/components/content/Schedule";
+import Courses from "@/components/content/Courses";
+
 export default Vue.extend({
   head: {
     title: "最新消息",
@@ -26,6 +31,10 @@ export default Vue.extend({
   async fetch() {
     this.news = await this.$content("news").sortBy("prio", "desc").sortBy("createdAt", "desc").fetch();
   },
+  components: {
+    Schedule,
+    Courses,
+  }
 });
 </script>
 

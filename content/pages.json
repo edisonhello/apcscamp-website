@@ -2,69 +2,11 @@
   "pages": [
     {
       "name": "最新消息",
-      "link": "/"
+      "link": ""
     },
     {
-      "name": "集訓內容",
-      "link": "/content",
-      "children": [
-        {
-          "name": "課程主題",
-          "link": "/courses/"
-        },
-        {
-          "name": "活動日程",
-          "link": "/dates/"
-        },
-        {
-          "name": "師資陣容",
-          "link": "/teachers/"
-        }
-      ]
-    },
-    {
-      "name": "關於活動",
-      "link": "/event",
-      "children": [
-        {
-          "name": "活動簡章",
-          "link": "/rules/"
-        },
-        {
-          "name": "活動緣起",
-          "link": "/about/"
-        }
-      ]
-    },
-    {
-      "name": "贊助夥伴",
-      "link": "/sponsors/"
-    },
-    {
-      "name": "登入 / 報名",
-      "link": "/signin/",
-      "links": [
-        "/signup/"
-      ],
-      "alternate": {
-        "name": "個人資料",
-        "link": "/user",
-        "children": [
-          {
-            "name": "修改資料",
-            "link": "/edit/"
-          },
-          {
-            "name": "變更密碼",
-            "link": "/changePassword/"
-          },
-          {
-            "name": "　登出　",
-            "link": "/signout/",
-            "prefetch": false
-          }
-        ]
-      }
+      "name": "活動日程",
+      "link": "#schedule"
     }
   ]
 }

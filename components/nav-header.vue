@@ -362,7 +362,7 @@ export default Vue.extend({
   },
   computed: {
     current_page_name() {
-      const path = this.$route.path;
+      const path = this.$route.hash;
       for (let page of this.pages) {
         if (typeof page.children === "undefined") {
           continue;
@@ -393,7 +393,7 @@ export default Vue.extend({
   mounted() {},
   methods: {
     isCurrentPage(ele) {
-      const path = this.$route.path;
+      const path = this.$route.hash;
       if (typeof ele.children === "undefined") {
         if (typeof ele.links === "undefined") return path === ele.link;
         let idx = ele.links.findIndex((x) => x === path);

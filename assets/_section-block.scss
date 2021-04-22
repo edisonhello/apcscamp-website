@@ -61,5 +61,8 @@
         }
       }
     }
+    #{$content-name}.content-shadow {
+      box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.8);
+    }
   }
 }
