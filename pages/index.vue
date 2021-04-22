@@ -10,25 +10,29 @@
     :key="article.id"
   )
 
+  Section(:sectionId="\"aboutAPCS\"" :sectionName="\"關於 APCS\"")
+    template
+      AboutAPCS
+
+  Section(:sectionId="\"aboutUs\"" :sectionName="\"關於我們\"")
+    template
+      AboutUs
+
   Section(:sectionId="\"schedule\"" :sectionName="\"活動日程\"")
     template
       Schedule
 
-  Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
-    template
-      Teachers
-
   Section(:sectionId="\"courses\"" :sectionName="\"課程安排\"")
     template
       Courses
+
+  Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
+    template
+      Teachers
 </template>
 
 <script>
 import Vue from "vue";
-import Section from '@/components/Section';
-import Courses from "@/components/content/Courses";
-import Schedule from "@/components/content/Schedule";
-import Teachers from "@/components/content/Teachers";
 
 export default Vue.extend({
   head: {
@@ -42,11 +46,6 @@ export default Vue.extend({
   async fetch() {
     this.news = await this.$content("news").sortBy("prio", "desc").sortBy("createdAt", "desc").fetch();
   },
-  components: {
-    Section, 
-    Schedule,
-    Courses,
-  }
 });
 </script>
 
