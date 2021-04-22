@@ -5,7 +5,7 @@
       img.maximg(src="/dbodkck4.png")
     .inner
       .titles
-        h1 No Bug <wbr>No Life
+        h1 APCS CAMP
         h2 2021 程式解題競賽集訓營
         h3 「連便當工人都是國手的實力派營隊」
       step-button(:href="nextStep.link" style="font-size:1.2em;") {{ nextStep.text }}
@@ -18,7 +18,7 @@ export default Vue.extend({
     return {
       nextStep: {
         link: '/signin/',
-        text: '報名截止囉',
+        text: '立刻報名',
       },
     }
   },
