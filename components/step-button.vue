@@ -24,8 +24,8 @@ export default Vue.extend({
 .box {
   display: inline-block;
   padding: 10px 30px;
-  // background: #e5a54d;
-  // color: #f6ea25;
+  // background: #4E49A1;
+  // color: #4E49A1;
   background: rgba(200, 200, 200, 0.3);
   color: #fff;
   border-radius: 2px;

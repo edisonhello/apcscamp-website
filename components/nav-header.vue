@@ -4,16 +4,16 @@ header.nav
     .left-side
       nuxt-link.icon(to="/")
         img(src="/icon.png")
-      svg#speak(height="50", width="165", v-if="current_page_name !== ''")
-        ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
-        polygon(points="0,5 50,15 16,25", style="fill:#fff;")
-        text(
-          x=45,
-          y=32,
-          fill="#db6d42",
-          style="font: 900 1.2em 'Noto Serif TC', serif;",
-          engthAdjust="spacingAndGlyphs"
-        ) {{ current_page_name }}
+      //- svg#speak(height="50", width="165", v-if="current_page_name !== ''")
+      //-   ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
+      //-   polygon(points="0,5 50,15 16,25", style="fill:#fff;")
+      //-   text(
+      //-     x=45,
+      //-     y=32,
+      //-     fill="#db6d42",
+      //-     style="font: 900 1.2em 'Noto Serif TC', serif;",
+      //-     engthAdjust="spacingAndGlyphs"
+      //-   ) {{ current_page_name }}
     .right-side
       #nav-button(data-display="flex", data-time="100", @click="toggleNav")
         font-awesome-icon(icon='bars')
@@ -48,6 +48,18 @@ header.nav
 </template>
 
 <style lang="scss" scoped>
+$nav-bg-color: #726ebb;
+$nav-bg-color-mob: #726ebb;
+$nav-pop-bg-color-mob: #6b67b6;
+$nav-item-text: #fff;
+$nav-item-hover-bg: #58549b;
+$nav-item-hover-text: #87dff5;
+$nav-item-active-bg: #615db9;
+$nav-item-active-text: #5addfd;
+$nav-item-active-text-mob: #5addfd;
+$nav-link-hover-text: #726ebb;
+
+
 $skew: -10deg;
 *:not(i.fas):not(i.far):not(.fa) {
   margin: 0;
@@ -90,7 +102,7 @@ header.nav {
     float: right;
     width: calc(94vw - #{$nav-header-height});
     height: $nav-header-height;
-    background-color: #dbb682;
+    background-color: $nav-bg-color;
     padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
     border-radius: 5px 0px 0px 5px;
     box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2),
@@ -101,7 +113,7 @@ header.nav {
       padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
       box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2),
         0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-      background-color: #e5a54d;
+      background-color: $nav-bg-color-mob;
     }
     #speak {
       position: relative;
@@ -166,7 +178,7 @@ header.nav {
         z-index: 100;
         padding-top: 15px;
         flex-direction: column;
-        background-color: #ffbf5f;
+        background-color: $nav-pop-bg-color-mob;
       }
       .item {
         text-decoration: none;
@@ -175,7 +187,7 @@ header.nav {
         align-items: center;
         margin: 0 $nav-header-height * 0.15 !important;
         padding: $nav-header-height * 0.15 $nav-header-height * 0.25;
-        color: #fffde7;
+        color: $nav-item-text;
         transition: 0.2s;
         &.skewed:hover {
           animation: quake-skewed 0.4s;
@@ -195,8 +207,8 @@ header.nav {
           }
         }
         &:hover {
-          background-color: #c5a475;
-          color: #fff368;
+          background-color: $nav-item-hover-bg;
+          color: $nav-item-hover-text;
           animation: quake 0.4s;
           @keyframes quake {
             0% {
@@ -214,10 +226,10 @@ header.nav {
           }
         }
         &.active {
-          background-color: #e5a54d;
-          color: #f6ea25;
+          background-color: $nav-item-active-bg;
+          color: $nav-item-active-text;
           @include with-mobile {
-            color: #ffeb00;
+            color: $nav-item-active-text-mob;
           }
         }
         @include with-mobile {
@@ -236,15 +248,15 @@ header.nav {
         display: flex;
         align-items: center;
         margin: 0 $nav-header-height * 0.25 !important;
-        padding: $nav-header-height * 0.15 $nav-header-height * 0.45;
-        color: #fffde7;
+        padding: $nav-header-height * 0.15 $nav-header-height * 0.25;
+        color: $nav-item-text;
         transition-duration: 0.2s;
         transition-property: color;
         &.active {
-          background-color: #e5a54d;
-          color: #f6ea25;
+          background-color: $nav-item-active-bg;
+          color: $nav-item-active-text;
           @include with-mobile {
-            color: #ffeb00;
+            color: $nav-item-active-text-mob;
           }
         }
         .ilist {
@@ -252,15 +264,15 @@ header.nav {
           display: none;
           padding-top: 0;
           .item {
-            padding: $nav-header-height * 0.15 $nav-header-height * 0.45;
+            padding: $nav-header-height * 0.15 $nav-header-height * 0.25;
             margin: 0 !important;
             &:last-of-type {
               padding-bottom: $nav-header-height * 0.15;
             }
             &.nuxt-link-active,
             &.active {
-              background-color: #ffe6c4;
-              color: #ffbd00;
+              // background-color: #9a9;
+              color: $nav-item-active-text;
               @include with-mobile {
                 background-color: transparent;
               }
@@ -282,8 +294,8 @@ header.nav {
               transform: rotate(0);
             }
             align-self: flex-start;
-            background-color: #c5a475;
-            color: #ffca34;
+            background-color: $nav-item-hover-bg;
+            color: $nav-link-hover-text;
             animation: quake 0.4s;
             padding: $nav-header-height * 0.15 0;
             & > *:first-child {
@@ -293,7 +305,7 @@ header.nav {
               display: flex !important;
               flex-direction: column;
               .item {
-                background-color: #c5a475;
+                background-color: $nav-item-hover-bg;
               }
             }
             @keyframes quake {
