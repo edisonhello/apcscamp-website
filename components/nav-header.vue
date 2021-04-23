@@ -3,7 +3,7 @@ header.nav
   .header-bar
     .left-side
       nuxt-link.icon(to="/")
-        img(src="/Asset 9.png")
+        img(src="/icon.png")
       svg#speak(height="50", width="165", v-if="current_page_name !== ''")
         ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
         polygon(points="0,5 50,15 16,25", style="fill:#fff;")
@@ -118,11 +118,11 @@ header.nav {
       height: ($nav-header-height * 1.8);
       border-radius: 10px;
       @include with-not-mobile {
-        animation-name: rotate10;
-        animation-duration: 5s;
-        animation-timing-function: linear;
-        animation-delay: 3s;
-        animation-iteration-count: infinite;
+        // animation-name: rotate10;
+        // animation-duration: 5s;
+        // animation-timing-function: linear;
+        // animation-delay: 3s;
+        // animation-iteration-count: infinite;
       }
       // box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
       //   0 4px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -173,8 +173,8 @@ header.nav {
         font-weight: 700;
         display: flex;
         align-items: center;
-        margin: 0 $nav-header-height * 0.25 !important;
-        padding: $nav-header-height * 0.15 $nav-header-height * 0.45;
+        margin: 0 $nav-header-height * 0.15 !important;
+        padding: $nav-header-height * 0.15 $nav-header-height * 0.25;
         color: #fffde7;
         transition: 0.2s;
         &.skewed:hover {

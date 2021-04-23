@@ -1,14 +1,13 @@
 <template lang="pug">
-.container
-  .columns
-    .inner
-      img.maximg(src="/dbodkck4.png")
-    .inner
-      .titles
-        h1 APCS CAMP
-        h2 2021 程式解題競賽集訓營
-        h3 「連便當工人都是國手的實力派營隊」
-      step-button(:href="nextStep.link" style="font-size:1.2em;") {{ nextStep.text }}
+  img.maximg(src="/banner.png")
+  //- .inner
+  //-   img.maximg(src="/dbodkck4.png")
+  //- .inner
+  //-   .titles
+  //-     h1 APCS CAMP
+  //-     h2 2021 程式解題競賽集訓營
+  //-     h3 「連便當工人都是國手的實力派營隊」
+  //-   step-button(:href="nextStep.link" style="font-size:1.2em;") {{ nextStep.text }}
 </template>
 
 <script lang="ts">

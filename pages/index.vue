@@ -2,17 +2,17 @@
 .outer-container
   .banner
     banner
-  nuxt-section-block(
-    v-for="article in news",
-    :id="article.id",
-    :document="article",
-    :date="true",
-    :key="article.id"
-  )
+  //- nuxt-section-block(
+  //-   v-for="article in news",
+  //-   :id="article.id",
+  //-   :document="article",
+  //-   :date="true",
+  //-   :key="article.id"
+  //- )
 
   Section(:sectionId="\"aboutAPCS\"" :sectionName="\"關於 APCS\"")
     template
-      AboutAPCS
+      AboutApcs
 
   Section(:sectionId="\"aboutUs\"" :sectionName="\"關於我們\"")
     template

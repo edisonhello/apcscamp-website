@@ -3,7 +3,7 @@ $footer-color: #dbb682;
 $nav-header-height: 50px;
 $nav-header-space: $nav-header-height * 2 + 20px;
 $mobile-nav-header-space: $nav-header-height * 1.2 + 20px;
-$mobile-width: 1043px;
+$mobile-width: 1070px;
 @mixin with-mobile() {
   @media all and (max-width: $mobile-width) {
     @content;
