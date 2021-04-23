@@ -67,5 +67,10 @@ export default Vue.extend({
     padding-left: 5vw;
     padding-right: 5vw;
   }
+
+  .banner {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+  }
 }
 </style>
