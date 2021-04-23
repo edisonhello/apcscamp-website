@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  p 喵
+  p 我們可以讓你變得跟帥帥總召一樣帥
 </template>
 
 <script>
