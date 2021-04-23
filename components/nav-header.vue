@@ -40,7 +40,7 @@ header.nav
             .ilist(v-if="ele.children.length > 0", @click.stop)
               nuxt-link.item(
                 v-for="obj in ele.children",
-                :to="ele.link + obj.link",
+                :to="obj.link",
                 :key="obj.link",
                 :prefetch="typeof obj.prefetch === 'undefined' ? true : obj.prefetch"
               ) {{ obj.name }}
@@ -213,8 +213,7 @@ header.nav {
             animation: none;
           }
         }
-        &.active
-       {
+        &.active {
           background-color: #e5a54d;
           color: #f6ea25;
           @include with-mobile {

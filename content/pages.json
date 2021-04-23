@@ -6,23 +6,37 @@
     },
     {
       "name": "關於 APCS",
-      "link": "#aboutAPCS"
+      "link": "#aboutapcs"
     },
     {
       "name": "關於我們",
-      "link": "#aboutUs"
+      "link": "#aboutus"
     },
     {
-      "name": "活動日程",
-      "link": "#schedule"
-    },
-    {
-      "name": "課程安排",
-      "link": "#courses"
+      "name": "營隊資訊",
+      "link": "",
+      "children": [
+        {
+          "name": "營隊資訊",
+          "link": "#information"
+        },
+        {
+          "name": "活動日程",
+          "link": "#schedule"
+        },
+        {
+          "name": "課程安排",
+          "link": "#courses"
+        }
+      ]
     },
     {
       "name": "師資陣容",
       "link": "#teachers"
+    },
+    {
+      "name": "立即報名",
+      "link": "#register"
     }
   ]
 }

@@ -10,25 +10,33 @@
   //-   :key="article.id"
   //- )
 
-  Section(:sectionId="\"aboutAPCS\"" :sectionName="\"關於 APCS\"")
+  Section(:sectionId="\"aboutapcs\"" :sectionName="\"關於 APCS\"")
     template
       AboutApcs
 
-  Section(:sectionId="\"aboutUs\"" :sectionName="\"關於我們\"")
+  Section(:sectionId="\"aboutus\"" :sectionName="\"關於我們\"")
     template
       AboutUs
 
-  Section(:sectionId="\"schedule\"" :sectionName="\"活動日程\"")
+  Section(:sectionId="\"information\"" :sectionName="\"營隊資訊\"")
+    template
+      Information
+
+  Section(:sectionId="\"schedule\"" :sectionName="\"上課日程\"")
     template
       Schedule
 
-  Section(:sectionId="\"courses\"" :sectionName="\"課程安排\"")
+  Section(:sectionId="\"courses\"" :sectionName="\"課程內容\"")
     template
       Courses
 
   Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
     template
       Teachers
+
+  Section(:sectionId="\"register\"" :sectionName="\"立即報名\"")
+    template
+      Register
 </template>
 
 <script>
