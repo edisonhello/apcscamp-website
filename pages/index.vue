@@ -61,9 +61,9 @@ export default Vue.extend({
       }
 
       const currentPath = window.location.hash.slice(1)
-        if (this.$route.path !== currentPath) {
-          this.$router.push({ hash: currentPath });
-        }
+      if (this.$route.path !== currentPath) {
+        this.$router.push({ hash: currentPath });
+      }
     }, {
       rootMargin: "-480px 0px -120px 0px"
     });

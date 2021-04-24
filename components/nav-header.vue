@@ -4,17 +4,7 @@
       .left-side
         nuxt-link.icon(to="/")
           img(src="/icon.png")
-        //- svg#speak(height="50", width="165", v-if="current_page_name !== ''")
-        //-   ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
-        //-   polygon(points="0,5 50,15 16,25", style="fill:#fff;")
-        //-   text(
-        //-     x=45,
-        //-     y=32,
-        //-     fill="#db6d42",
-        //-     style="font: 900 1.2em 'Noto Serif TC', serif;",
-        //-     engthAdjust="spacingAndGlyphs"
-        //-   ) {{ current_page_name }}
-      .right-side
+      .right-side(:key="currentHash")
         #nav-button(data-display="flex", data-time="100", @click="toggleNav")
           font-awesome-icon(icon='bars')
         #nav-list.ilist
@@ -370,7 +360,7 @@ export default Vue.extend({
   data() {
     return {
       raw_pages: [],
-      dummy: 123,
+      currentHash: '#',
     };
   },
   computed: {
@@ -404,12 +394,9 @@ export default Vue.extend({
     this.raw_pages = pages;
   },
   mounted() {
-    console.log('mount');
-    //- setInterval(() => {
-    //-   this.dummy = (new Date()).toISOString();
-    //-   this.$forceUpdate();
-    //-   console.log('meow');
-    //- }, 1000);
+    setInterval(() => {
+      this.currentHash = window.location.hash;
+    }, 1000);
   },
   methods: {
     isCurrentPage(ele) {
