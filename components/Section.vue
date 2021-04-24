@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.section
     a.pageAnchor(:id="sectionId")
     section-block
       template(v-slot:title) {{ sectionName }}
@@ -17,7 +17,7 @@ export default Vue.extend({
     sectionName: { 
       default: '',
     },
-  }
+  },
 });
 </script>
 

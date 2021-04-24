@@ -43,16 +43,35 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  head: {
-    title: "最新消息",
-  },
-  data() {
-    return {
-      news: [],
-    };
-  },
-  async fetch() {
-    this.news = await this.$content("news").sortBy("prio", "desc").sortBy("createdAt", "desc").fetch();
+  mounted() {
+    const histStack = []
+
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(([entry], observer) => {
+      const dom = entry.target.querySelector('a');
+      const hash = dom.getAttribute('id');
+      if (entry.isIntersecting) {
+        history.pushState(null, null, `#${hash}`);
+        histStack.push(hash);
+      } else {
+        if (hash === histStack[histStack.length - 1]) {
+          history.back();
+          histStack.pop();
+        }
+      }
+
+      const currentPath = window.location.hash.slice(1)
+        if (this.$route.path !== currentPath) {
+          this.$router.push({ hash: currentPath });
+        }
+    }, {
+      rootMargin: "-480px 0px -120px 0px"
+    });
+
+    for (const section of sections) {
+      observer.observe(section);
+    }
+
   },
 });
 </script>

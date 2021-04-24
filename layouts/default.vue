@@ -1,15 +1,30 @@
 <template lang="pug">
 .background
-  nav-header
+  nav-header(:key="currentHash")
   #base
     Nuxt
   info-footer
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
+import VueScrollable from 'vue-scrollactive';
+
+Vue.use(VueScrollable);
+
 export default Vue.extend({
   name: 'Default',
+  data() {
+    return {
+      currentHash: '#',
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentHash = window.location.hash;
+      console.log(this.currentHash);
+    }, 1000);
+  },
 })
 </script>
 

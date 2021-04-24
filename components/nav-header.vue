@@ -1,50 +1,51 @@
 <template lang="pug">
-header.nav
-  .header-bar
-    .left-side
-      nuxt-link.icon(to="/")
-        img(src="/icon.png")
-      //- svg#speak(height="50", width="165", v-if="current_page_name !== ''")
-      //-   ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
-      //-   polygon(points="0,5 50,15 16,25", style="fill:#fff;")
-      //-   text(
-      //-     x=45,
-      //-     y=32,
-      //-     fill="#db6d42",
-      //-     style="font: 900 1.2em 'Noto Serif TC', serif;",
-      //-     engthAdjust="spacingAndGlyphs"
-      //-   ) {{ current_page_name }}
-    .right-side
-      #nav-button(data-display="flex", data-time="100", @click="toggleNav")
-        font-awesome-icon(icon='bars')
-      #nav-list.ilist
-        template(v-for="ele in pages")
-          nuxt-link.skewed.item(
-            v-if="typeof ele.children === 'undefined'",
-            :to="ele.link",
-            :href="ele.link",
-            :key="ele.link",
-            :class="{ active: isCurrentPage(ele) }",
-            :prefetch="typeof ele.prefetch === 'undefined' ? true : ele.prefetch"
-          )
-            span {{ ele.name }}
-          .skewed.items(
-            v-else,
-            :class="{ active: isCurrentPage(ele) }",
-            :key="ele.link",
-            @click="toggleDropdown"
-          )
-            span
-              | {{ ele.name }}
-              font-awesome-icon(icon='caret-down', class='dropdown-icon')
-            .ilist(v-if="ele.children.length > 0", @click.stop)
-              nuxt-link.item(
-                v-for="obj in ele.children",
-                :to="obj.link",
-                :key="obj.link",
-                :prefetch="typeof obj.prefetch === 'undefined' ? true : obj.prefetch"
-              ) {{ obj.name }}
-      #touch-black(@click="toggleNav")
+  header.nav
+    .header-bar
+      .left-side
+        nuxt-link.icon(to="/")
+          img(src="/icon.png")
+        //- svg#speak(height="50", width="165", v-if="current_page_name !== ''")
+        //-   ellipse(cx=83, cy=25, rx=75, ry=20, style="fill:#fff;")
+        //-   polygon(points="0,5 50,15 16,25", style="fill:#fff;")
+        //-   text(
+        //-     x=45,
+        //-     y=32,
+        //-     fill="#db6d42",
+        //-     style="font: 900 1.2em 'Noto Serif TC', serif;",
+        //-     engthAdjust="spacingAndGlyphs"
+        //-   ) {{ current_page_name }}
+      .right-side
+        #nav-button(data-display="flex", data-time="100", @click="toggleNav")
+          font-awesome-icon(icon='bars')
+        #nav-list.ilist
+          template(v-for="ele in pages")
+            nuxt-link.skewed.item.scrollactive-item(
+              v-if="typeof ele.children === 'undefined'",
+              :to="ele.link",
+              :href="ele.link",
+              :key="ele.link",
+              :class="{ \"is-active\": isCurrentPage(ele) }",
+              :prefetch="typeof ele.prefetch === 'undefined' ? true : ele.prefetch"
+            )
+              span {{ ele.name }}
+            .skewed.items(
+              v-else,
+              :key="ele.link",
+              :class="{ \"is-active\": isCurrentPage(ele) }",
+              @click="toggleDropdown"
+            )
+              span
+                | {{ ele.name }}
+                font-awesome-icon(icon='caret-down', class='dropdown-icon')
+              .ilist(v-if="ele.children.length > 0", @click.stop)
+                nuxt-link.item.scrollactive-item(
+                  v-for="obj in ele.children",
+                  :to="obj.link",
+                  :key="obj.link",
+                  :prefetch="typeof obj.prefetch === 'undefined' ? true : obj.prefetch"
+                  :class="{ \"is-active\": isCurrentPage(ele) }",
+                ) {{ obj.name }}
+        #touch-black(@click="toggleNav")
 </template>
 
 <style lang="scss" scoped>
@@ -225,7 +226,7 @@ header.nav {
             animation: none;
           }
         }
-        &.active {
+        &.is-active {
           background-color: $nav-item-active-bg;
           color: $nav-item-active-text;
           @include with-mobile {
@@ -252,7 +253,7 @@ header.nav {
         color: $nav-item-text;
         transition-duration: 0.2s;
         transition-property: color;
-        &.active {
+        &.is-active {
           background-color: $nav-item-active-bg;
           color: $nav-item-active-text;
           @include with-mobile {
@@ -287,7 +288,7 @@ header.nav {
         }
         @include with-not-mobile {
           &:hover,
-          &.active:hover,
+          &.is-active:hover,
           &.nuxt-link-active:hover {
             transform: rotate(0);
             & > * {
@@ -369,6 +370,7 @@ export default Vue.extend({
   data() {
     return {
       raw_pages: [],
+      dummy: 123,
     };
   },
   computed: {
@@ -379,7 +381,7 @@ export default Vue.extend({
           continue;
         }
         for (let sub of page.children) {
-          if (path === page.link + sub.link) return sub.name;
+          if (path === sub.link) return sub.name;
         }
       }
       return "";
@@ -401,7 +403,14 @@ export default Vue.extend({
 
     this.raw_pages = pages;
   },
-  mounted() {},
+  mounted() {
+    console.log('mount');
+    //- setInterval(() => {
+    //-   this.dummy = (new Date()).toISOString();
+    //-   this.$forceUpdate();
+    //-   console.log('meow');
+    //- }, 1000);
+  },
   methods: {
     isCurrentPage(ele) {
       const path = this.$route.hash;
@@ -411,7 +420,7 @@ export default Vue.extend({
         return path === ele.link || idx !== -1;
       }
       for (let child of ele.children) {
-        if (ele.link + child.link === path) return true;
+        if (child.link === path) return true;
       }
       return false;
     },
