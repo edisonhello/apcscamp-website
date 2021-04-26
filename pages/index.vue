@@ -84,12 +84,13 @@ export default Vue.extend({
     },
     registerDynamicOpacityNavbar() {
       const { cover, navbar } = this;
-      const coverHeight = cover.clientHeight;
       const buffer = 100;
 
       // navbar.style.opacity = 0;
 
       window.addEventListener('scroll', () => {
+        const coverHeight = cover.clientHeight;
+
         const yOffset = window.pageYOffset;
         const delta = yOffset - coverHeight;
         const baseOpa = (delta / buffer * 0.5) + 0.5;
