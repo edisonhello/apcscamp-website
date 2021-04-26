@@ -9,11 +9,10 @@
           font-awesome-icon(icon='bars')
         #nav-list.ilist
           template(v-for="ele in pages")
-            nuxt-link.skewed.item(
+            a.skewed.item(
               v-if="typeof ele.children === 'undefined'",
-              :to="ele.link",
-              :href="ele.link",
               :key="ele.link",
+              :href="ele.link",
               :class="{ \"is-active\": isCurrentPage(ele) }",
               :prefetch="typeof ele.prefetch === 'undefined' ? true : ele.prefetch"
             )
@@ -28,9 +27,9 @@
                 | {{ ele.name }}
                 font-awesome-icon(icon='caret-down', class='dropdown-icon')
               .ilist(v-if="ele.children.length > 0", @click.stop)
-                nuxt-link.item(
+                a.item(
                   v-for="obj in ele.children",
-                  :to="obj.link",
+                  :href="obj.link",
                   :key="obj.link",
                   :prefetch="typeof obj.prefetch === 'undefined' ? true : obj.prefetch"
                   :class="{ \"list-item-is-active\": isCurrentPage(obj) }",
@@ -83,7 +82,7 @@ export default Vue.extend({
   },
   mounted() {
     setInterval(() => {
-      this.currentHash = window.location.hash;
+      this.currentHash = window.location.hash || '#';
     }, 1000);
   },
   methods: {
