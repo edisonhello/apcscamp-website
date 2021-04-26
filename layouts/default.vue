@@ -1,6 +1,5 @@
 <template lang="pug">
 .background
-  nav-header
   #base
     Nuxt
   info-footer
@@ -13,19 +12,6 @@ export default Vue.extend({
   name: 'Default',
 })
 </script>
-
-<style lang="scss">
-* {
-  margin: 0;
-}
-body {
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-</style>
 
 <style lang="scss" scoped>
 .background {
@@ -40,7 +26,21 @@ html {
   // background-size: cover;
   background-color: #373092;
 }
-#base {
-  min-height: 94vh;
+// #base {
+//   min-height: 94vh;
+// }
+</style>
+
+<style lang="scss">
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
