@@ -1,9 +1,9 @@
 <template lang="pug">
   header.nav(:style="cssVars")
     .header-bar
-      .left-side
-        nuxt-link.icon(to="/")
-          img(src="/icon.png")
+      //- .left-side
+      //-   nuxt-link.icon(to="/")
+      //-     img(src="/icon.png")
       .right-side(:key="currentHash")
         #nav-button(data-display="flex", data-time="100", @click="toggleNav")
           font-awesome-icon(icon='bars')
