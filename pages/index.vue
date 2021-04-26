@@ -131,10 +131,11 @@ export default Vue.extend({
 .cover {
   // vertical-align: middle;
   // min-height: 100vh;
-  min-width: 98vw;
+  // min-width: 100vw;
   // margin-top: 4vw;
   // margin-bottom: 2vw;
-  max-width: 98vw;
+  width: 100vw;
+  max-width: 100%;
   max-height: 100vw;
   // max-height: 100vw - #{$nav-header-height};
 
