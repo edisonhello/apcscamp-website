@@ -17,6 +17,8 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+p {
+  line-height: 1.8;
+}
 </style>
