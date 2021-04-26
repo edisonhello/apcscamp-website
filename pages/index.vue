@@ -57,10 +57,10 @@ export default Vue.extend({
         }
       }
 
-      const currentPath = window.location.hash.slice(1)
-      if (this.$route.path !== currentPath) {
-        // this.$router.push({ hash: currentPath });
-      }
+      // const currentPath = window.location.hash.slice(1)
+      // if (this.$route.path !== currentPath) {
+      //   this.$router.push({ hash: currentPath });
+      // }
     }
 
     const sections = document.querySelectorAll('.section');
@@ -78,7 +78,6 @@ export default Vue.extend({
     }
 
     setInterval(() => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset <= 150) updateHash('', true);
     }, 1000);
 

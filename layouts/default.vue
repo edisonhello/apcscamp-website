@@ -29,15 +29,16 @@ html {
 
 <style lang="scss" scoped>
 .background {
-  background-color: $default-background-color;
-  min-height: 100vh;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ), url('/background.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  // background-color: $default-background-color;
+  // min-height: 100vh;
+  // background-image: linear-gradient(
+  //     rgba(0, 0, 0, 0.25),
+  //     rgba(0, 0, 0, 0.25)
+  //   ), url('/background.png');
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-size: cover;
+  background-color: #373092;
 }
 #base {
   min-height: 94vh;
