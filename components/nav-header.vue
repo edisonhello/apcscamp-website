@@ -9,7 +9,7 @@
           font-awesome-icon(icon='bars')
         #nav-list.ilist
           template(v-for="ele in pages")
-            nuxt-link.skewed.item.scrollactive-item(
+            nuxt-link.skewed.item(
               v-if="typeof ele.children === 'undefined'",
               :to="ele.link",
               :href="ele.link",
@@ -28,15 +28,162 @@
                 | {{ ele.name }}
                 font-awesome-icon(icon='caret-down', class='dropdown-icon')
               .ilist(v-if="ele.children.length > 0", @click.stop)
-                nuxt-link.item.scrollactive-item(
+                nuxt-link.item(
                   v-for="obj in ele.children",
                   :to="obj.link",
                   :key="obj.link",
                   :prefetch="typeof obj.prefetch === 'undefined' ? true : obj.prefetch"
-                  :class="{ \"is-active\": isCurrentPage(ele) }",
+                  :class="{ \"list-item-is-active\": isCurrentPage(obj) }",
                 ) {{ obj.name }}
         #touch-black(@click="toggleNav")
 </template>
+
+<script>
+import Vue from "vue";
+
+export default Vue.extend({
+  data() {
+    return {
+      raw_pages: [],
+      currentHash: '#',
+    };
+  },
+  computed: {
+    current_page_name() {
+      const path = this.currentPath;
+      for (let page of this.pages) {
+        if (typeof page.children === "undefined") {
+          continue;
+        }
+        for (let sub of page.children) {
+          if (path === sub.link) return sub.name;
+        }
+      }
+      return "";
+    },
+    pages() {
+      let parsed = [];
+      for (let page of this.raw_pages) {
+        if (typeof page.alternate === "undefined") parsed.push(page);
+        else {
+          if (this.$auth.loggedIn) parsed.push(page.alternate);
+          else parsed.push(page);
+        }
+      }
+      return parsed;
+    },
+    currentPath() {
+      return this.currentHash;
+    },
+  },
+  async fetch() {
+    const { pages } = await this.$content("pages").fetch();
+
+    this.raw_pages = pages;
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentHash = window.location.hash;
+    }, 1000);
+  },
+  methods: {
+    isCurrentPage(ele) {
+      const path = this.currentPath;
+      if (typeof ele.children === "undefined") {
+        if (typeof ele.links === "undefined") return path === ele.link;
+        let idx = ele.links.findIndex((x) => x === path);
+        return path === ele.link || idx !== -1;
+      }
+      for (let child of ele.children) {
+        if (child.link === path) return true;
+      }
+      return false;
+    },
+    toggleDropdown(e) {
+      let child_display = getComputedStyle(
+        e.currentTarget.firstChild
+      ).getPropertyValue("display");
+      if (child_display === "none") return;
+      let list = e.currentTarget.getElementsByClassName("ilist")[0];
+      if (!list.style.display) {
+        list.style.display = "block";
+      } else {
+        list.style.display = "";
+      }
+    },
+    toggleNav() {
+      // possible state: hidden, showing, shown, hiding
+      // hidden -> showing
+      // shown -> hiding
+      // showing -> none
+      // hiding -> none
+      let navlist = document.getElementById("nav-list");
+      let screen = document.getElementById("touch-black");
+      const display = "flex";
+      const time = 100;
+
+      if (!navlist.style.display) {
+        // hidden
+        showit();
+      } else {
+        if (navlist.classList.contains("showing")) {
+          // showing
+        } else if (navlist.classList.contains("hiding")) {
+          // hiding
+        } else {
+          // shown
+          hideit();
+        }
+      }
+
+      function showit() {
+        screen.style.display = "block";
+
+        navlist.classList.add("showing");
+        navlist.style.left = "-100vw";
+        navlist.style.display = display;
+
+        let prevt = undefined;
+        function ani(ts) {
+          if (!navlist.classList.contains("showing")) return;
+          if (prevt === undefined) prevt = ts;
+          let progress = Math.min(1, (ts - prevt) / time);
+          navlist.style.left = navlist.clientWidth * (progress - 1) + "px";
+          if (progress >= 1) {
+            prevt = undefined;
+            navlist.classList.remove("showing");
+            return;
+          }
+          requestAnimationFrame(ani);
+        }
+        requestAnimationFrame(ani);
+      }
+
+      function hideit() {
+        screen.style.display = "";
+
+        navlist.classList.add("hiding");
+
+        let prevt = undefined;
+        function ani(ts) {
+          if (!navlist.classList.contains("hiding")) return;
+          if (prevt === undefined) prevt = ts;
+          let progress = Math.min(1, (ts - prevt) / time);
+          navlist.style.left = navlist.clientWidth * -progress + "px";
+          if (progress >= 1) {
+            prevt = undefined;
+            navlist.classList.remove("hiding");
+            navlist.style.display = "";
+            return;
+          }
+          requestAnimationFrame(ani);
+        }
+        requestAnimationFrame(ani);
+      }
+    },
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 $nav-bg-color: #726ebb;
@@ -260,8 +407,8 @@ header.nav {
             &:last-of-type {
               padding-bottom: $nav-header-height * 0.15;
             }
-            &.nuxt-link-active,
-            &.active {
+            //- &.nuxt-link-active,
+            &.list-item-is-active {
               // background-color: #9a9;
               color: $nav-item-active-text;
               @include with-mobile {
@@ -352,147 +499,3 @@ header.nav {
   }
 }
 </style>
-
-<script>
-import Vue from "vue";
-
-export default Vue.extend({
-  data() {
-    return {
-      raw_pages: [],
-      currentHash: '#',
-    };
-  },
-  computed: {
-    current_page_name() {
-      const path = this.$route.hash;
-      for (let page of this.pages) {
-        if (typeof page.children === "undefined") {
-          continue;
-        }
-        for (let sub of page.children) {
-          if (path === sub.link) return sub.name;
-        }
-      }
-      return "";
-    },
-    pages() {
-      let parsed = [];
-      for (let page of this.raw_pages) {
-        if (typeof page.alternate === "undefined") parsed.push(page);
-        else {
-          if (this.$auth.loggedIn) parsed.push(page.alternate);
-          else parsed.push(page);
-        }
-      }
-      return parsed;
-    },
-  },
-  async fetch() {
-    const { pages } = await this.$content("pages").fetch();
-
-    this.raw_pages = pages;
-  },
-  mounted() {
-    setInterval(() => {
-      this.currentHash = window.location.hash;
-    }, 1000);
-  },
-  methods: {
-    isCurrentPage(ele) {
-      const path = this.$route.hash;
-      if (typeof ele.children === "undefined") {
-        if (typeof ele.links === "undefined") return path === ele.link;
-        let idx = ele.links.findIndex((x) => x === path);
-        return path === ele.link || idx !== -1;
-      }
-      for (let child of ele.children) {
-        if (child.link === path) return true;
-      }
-      return false;
-    },
-    toggleDropdown(e) {
-      let child_display = getComputedStyle(
-        e.currentTarget.firstChild
-      ).getPropertyValue("display");
-      if (child_display === "none") return;
-      let list = e.currentTarget.getElementsByClassName("ilist")[0];
-      if (!list.style.display) {
-        list.style.display = "block";
-      } else {
-        list.style.display = "";
-      }
-    },
-    toggleNav() {
-      // possible state: hidden, showing, shown, hiding
-      // hidden -> showing
-      // shown -> hiding
-      // showing -> none
-      // hiding -> none
-      let navlist = document.getElementById("nav-list");
-      let screen = document.getElementById("touch-black");
-      const display = "flex";
-      const time = 100;
-
-      if (!navlist.style.display) {
-        // hidden
-        showit();
-      } else {
-        if (navlist.classList.contains("showing")) {
-          // showing
-        } else if (navlist.classList.contains("hiding")) {
-          // hiding
-        } else {
-          // shown
-          hideit();
-        }
-      }
-
-      function showit() {
-        screen.style.display = "block";
-
-        navlist.classList.add("showing");
-        navlist.style.left = "-100vw";
-        navlist.style.display = display;
-
-        let prevt = undefined;
-        function ani(ts) {
-          if (!navlist.classList.contains("showing")) return;
-          if (prevt === undefined) prevt = ts;
-          let progress = Math.min(1, (ts - prevt) / time);
-          navlist.style.left = navlist.clientWidth * (progress - 1) + "px";
-          if (progress >= 1) {
-            prevt = undefined;
-            navlist.classList.remove("showing");
-            return;
-          }
-          requestAnimationFrame(ani);
-        }
-        requestAnimationFrame(ani);
-      }
-
-      function hideit() {
-        screen.style.display = "";
-
-        navlist.classList.add("hiding");
-
-        let prevt = undefined;
-        function ani(ts) {
-          if (!navlist.classList.contains("hiding")) return;
-          if (prevt === undefined) prevt = ts;
-          let progress = Math.min(1, (ts - prevt) / time);
-          navlist.style.left = navlist.clientWidth * -progress + "px";
-          if (progress >= 1) {
-            prevt = undefined;
-            navlist.classList.remove("hiding");
-            navlist.style.display = "";
-            return;
-          }
-          requestAnimationFrame(ani);
-        }
-        requestAnimationFrame(ani);
-      }
-    },
-  },
-});
-</script>

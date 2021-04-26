@@ -46,31 +46,41 @@ export default Vue.extend({
   mounted() {
     const histStack = []
 
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(([entry], observer) => {
-      const dom = entry.target.querySelector('a');
-      const hash = dom.getAttribute('id');
-      if (entry.isIntersecting) {
+    const updateHash = (hash, isIn) => {
+      if (isIn) {
         history.pushState(null, null, `#${hash}`);
         histStack.push(hash);
       } else {
         if (hash === histStack[histStack.length - 1]) {
-          history.back();
-          histStack.pop();
+          const newHash = histStack.pop();
+          history.pushState(null, null, `#${newHash}`);
         }
       }
 
       const currentPath = window.location.hash.slice(1)
       if (this.$route.path !== currentPath) {
-        this.$router.push({ hash: currentPath });
+        // this.$router.push({ hash: currentPath });
       }
+    }
+
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(([entry], observer) => {
+      const dom = entry.target.querySelector('a');
+      const hash = dom.getAttribute('id');
+      
+      updateHash(hash, entry.isIntersecting);
     }, {
-      rootMargin: "-480px 0px -120px 0px"
+      rootMargin: "-200px 0px -800px 0px"
     });
 
     for (const section of sections) {
       observer.observe(section);
     }
+
+    setInterval(() => {
+      console.log(window.pageYOffset);
+      if (window.pageYOffset <= 150) updateHash('', true);
+    }, 1000);
 
   },
 });
