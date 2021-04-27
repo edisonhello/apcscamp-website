@@ -54,7 +54,6 @@ export default Vue.extend({
   },
   computed: {
     cssVars() {
-      console.log('bg opa:', this.bgOpacity);
       return `
         --bgOpacity: ${this.bgOpacity};
       `
@@ -238,31 +237,28 @@ $skew: -10deg;
 }
 
 header.nav {
-  //- background-color: $default-background-color;
-  //- background-color: rgba(12, 12, 12, 1);
-  @include with-not-mobile {
-    top: 20px;
-    width: 94vw;
-    right: 0;
-  }
-  @include with-mobile {
-    top: 0;
-    width: 100vw;
-  }
-
+  width: 100vw;
+  top: 0;
 
   .header-bar {
     float: right;
     height: $nav-header-height;
+    width: 100%;
     @include with-not-mobile {
-      width: calc(94vw - #{$nav-header-height});
+      //- width: calc(94vw - #{$nav-header-height});
+      //- width: 750px;
       border-radius: 5px 0px 0px 5px;
       padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
       box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2),
         0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
       background-color: rgba($nav-bg-color, var(--bgOpacity));
-      //- background-color: {{ bg }};
+
+      //- --fullBgColor: rgba($nav-bg-color, var(--bgOpacity));
+      //- background-image: linear-gradient(to left, var(--fullBgColor) 600px, rgba(0, 0, 0, 0) 200px);
+      
+
+      //- background-image: linear-gradient(to left, $nav-bg-color 90%, rgba(0, 0, 0, 0));
     }
     @include with-mobile {
       width: calc(100vw - #{$nav-header-height});
