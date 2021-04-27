@@ -105,7 +105,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .outer-container {
-  padding-top: $nav-header-height + 20px;
+  // padding-top: $nav-header-height + 20px;
   padding-left: 10vw;
   padding-right: 10vw;
   @include with-mobile {
@@ -136,12 +136,13 @@ export default Vue.extend({
   // margin-bottom: 2vw;
   width: 100vw;
   max-width: 100%;
-  max-height: 100vw;
+  max-height: 100vh;
   // max-height: 100vw - #{$nav-header-height};
 
   img {
     width: 100%;
     height: 100%;
+    display: block;
   }
 }
 
