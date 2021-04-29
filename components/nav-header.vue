@@ -248,36 +248,16 @@ header.nav {
     float: right;
     height: $nav-header-height;
     width: 100%;
+    background-color: rgba($nav-bg-color, var(--bgOpacity));
+
     @include with-not-mobile {
-      //- width: calc(94vw - #{$nav-header-height});
-      //- width: 750px;
       border-radius: 5px 0px 0px 5px;
       padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
-
-      background-color: rgba($nav-bg-color, var(--bgOpacity));
-
-      //- --fullBgColor: rgba($nav-bg-color, var(--bgOpacity));
-      //- background-image: linear-gradient(to left, var(--fullBgColor) 600px, rgba(0, 0, 0, 0) 200px);
-      
-
-      //- background-image: linear-gradient(to left, $nav-bg-color 90%, rgba(0, 0, 0, 0));
     }
     @include with-mobile {
       width: calc(100vw - #{$nav-header-height});
       border-radius: 0px;
       padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
-      box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2),
-        0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-      background-color: $nav-bg-color-mob;
-    }
-    #speak {
-      position: relative;
-      top: ($nav-header-height * -0.8);
-      transform: scale($nav-header-height / 50px);
-      @include with-mobile {
-        top: 2px;
-        padding-left: 10px;
-      }
     }
     .icon > img {
       position: relative;
