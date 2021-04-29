@@ -4,14 +4,6 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  mounted() {
-    
-    const width = window.innerWidth;
-    const bannerHeight = width * (471.95 / 1075);
-    window.addEventListener('scroll', () => {
-      console.log(window.pageYOffset)
-    })
-  },
 });
 </script>
 

@@ -65,6 +65,7 @@ export default Vue.extend({
     this.navbar = document.getElementById('navbar');
 
     this.registerDynamicOpacityNavbar();
+    this.registerDynamicAddNavbarShadow();
   },
   methods: {
     registerMovableNavbar() {
@@ -76,6 +77,8 @@ export default Vue.extend({
         if (yOffset > coverHeight) {
           navbar.classList.add('fixed-header');
           navbar.classList.remove('inline-header');
+
+          narbar.classList.add('header-shadow')
         } else {
           navbar.classList.add('inline-header');
           navbar.classList.remove('fixed-header');
@@ -99,6 +102,20 @@ export default Vue.extend({
         this.navbarBgOpacity = opa;
       });
     },
+    registerDynamicAddNavbarShadow() {
+      const { cover, navbar } = this;
+      const coverHeight = cover.clientHeight;
+
+      window.addEventListener('scroll', () => {
+        const yOffset = window.pageYOffset;
+
+        if (yOffset > coverHeight) {
+          navbar.classList.add('header-shadow')
+        } else {
+          navbar.classList.remove('header-shadow');
+        }
+      });
+    }
   },
 });
 </script>

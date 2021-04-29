@@ -240,6 +240,10 @@ header.nav {
   width: 100vw;
   top: 0;
 
+  &.header-shadow {
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
   .header-bar {
     float: right;
     height: $nav-header-height;
@@ -249,8 +253,6 @@ header.nav {
       //- width: 750px;
       border-radius: 5px 0px 0px 5px;
       padding: ($nav-header-height * 0.1) ($nav-header-height * 0.5);
-      box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2),
-        0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
       background-color: rgba($nav-bg-color, var(--bgOpacity));
 
