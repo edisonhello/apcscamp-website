@@ -1,57 +1,9 @@
 <template lang="pug">
   .container
-    .dates
-      table
-          tr
-            th
-            th 1/27 (三)
-            th 1/28 (四)
-            th 1/29 (五)
-            th 1/30 (六)
-            th 1/31 (日)
-          tr
-            td 08:30~09:00
-            td(rowspan="2") 報到
-            td(colspan="4") 集合 / 早餐
-          tr
-            td 09:00~10:00
-            td(rowspan="2") 數學
-            td(rowspan="2") 字串
-            td(rowspan="2") 網路流
-            td(rowspan="1") 彈性時間
-          tr
-            td 10:00~12:20
-            td(rowspan="1") 喵喵時間
-            td(rowspan="5") 正式賽
-          tr
-            td 12:30~13:30
-            td(colspan="4") 午餐 / 交流
-          tr
-            td 13:30~14:00
-            td(rowspan="2" colspan="4") 彈性時間
-          tr
-            td 14:00~14:30
-          tr
-            td 14:30~15:00
-            td(rowspan="3") 圖論
-            td(rowspan="3") 資料結構
-            td(rowspan="3") 動態規劃
-            td(rowspan="3") 組合賽局
-          tr
-            td 15:00~16:00
-            td 頒獎時間
-          tr
-            td 16:00~17:50
-            td(rowspan="3")  
-          tr
-            td 17:50~19:00
-            td(colspan="4") 晚餐 / 交流
-          tr
-            td 19:00~22:00
-            td 趣味賽
-            td 練習賽(個人)
-            td 練習賽(團體)
-            td 練習賽(個人)
+    div.img
+      img(src="/schedule1.png")
+    div.img
+      img(src="/schedule2.png")
 </template>
 
 <script lang="ts">
