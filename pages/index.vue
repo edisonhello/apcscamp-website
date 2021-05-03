@@ -18,7 +18,7 @@ div
       template
         AboutApcs
 
-    Section(:sectionId="\"aboutus\"" :sectionName="\"關於我們\"")
+    Section(:sectionId="\"aboutus\"" :sectionName="\"關於活動\"")
       template
         AboutUs
 
@@ -37,6 +37,10 @@ div
     Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
       template
         Teachers
+
+    Section(:sectionId="\"contacts\"" :sectionName="\"聯絡我們\"")
+      template
+        Contacts
 
     Section(:sectionId="\"register\"" :sectionName="\"立即報名\"")
       template
