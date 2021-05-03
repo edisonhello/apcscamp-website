@@ -82,7 +82,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'https://api.ioicamp.org/',
+    baseURL: 'https://api.apcscamp.org/',
   },
   /*
    ** Google Font module configuration

@@ -1,4 +1,4 @@
-# ioicamp2021-website
+# apcscamp2021-website
 
 ## Build Setup
 

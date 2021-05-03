@@ -1,6 +1,6 @@
 <template lang="pug">
 footer
-  div © 2021 APCSCAMP All Rights Reserved | <a href="mailto:apcscamp@csie.ntu.edu.tw">ioicamp@csie.ntu.edu.tw</a>
+  div © 2021 APCSCAMP All Rights Reserved | <a href="mailto:apcscamp@csie.ntu.edu.tw">apcscamp@csie.ntu.edu.tw</a>
 </template>
 
 <style lang="scss" scoped>
