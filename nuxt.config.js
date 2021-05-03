@@ -21,16 +21,16 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate: '%s | IOICamp 2021',
+    titleTemplate: '%s | APCSCamp 2021',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'IOICamp 2021 程式解題競賽集訓營 - 「連便當工人都是國手的實力派營隊」' },
-      { hid: "og:site_name", name: "og:site_name", property: "og:site_name", content: "IOICamp 2021 website" },
-      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'IOICamp 2021 程式解題競賽集訓營 - 「連便當工人都是國手的實力派營隊」' },
-      { hid: 'og:title', name: 'og:titlte', property: 'og:title', content: 'IOICamp 2021 程式解題競賽集訓營' },
-      { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://ioicamp.org' },
-      { hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://ioicamp.org/icon.png' },
+      { hid: 'description', name: 'description', content: 'APCSCamp 2021 程式設計能力培訓營' },
+      { hid: "og:site_name", name: "og:site_name", property: "og:site_name", content: "APCSCamp 2021 website" },
+      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'APCSCamp 2021 程式設計能力培訓營' },
+      { hid: 'og:title', name: 'og:titlte', property: 'og:title', content: 'APCSCamp 2021 程式設計能力培訓營' },
+      { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://apcs.camp' },
+      { hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://apcs.camp/icon.png' },
     ],
     htmlAttrs: {
       lang: 'zh-TW',
