@@ -22,8 +22,8 @@
           tr
             td 09:00~10:40
             td(rowspan="1") 課程和系統介紹 ／ 環境設定
-            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制(if, while)
-            td(rowspan="1") 進階迴圈(for) ／ 流程控制(continue,break)
+            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制
+            td(rowspan="1") 進階迴圈 ／ 流程控制
             td(rowspan="1") 巢狀迴圈
             td(rowspan="1") 一維陣列
             td(rowspan="1") 多維陣列
@@ -37,10 +37,10 @@
           tr
             td 10:50~12:30
             td(rowspan="1") 變數與資料型態 ／ 輸入輸出 ／ 運算式
-            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制(if, while)
-            td(rowspan="1") 進階迴圈(for) ／ 流程控制(continue,break)
+            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制
+            td(rowspan="1") 進階迴圈 ／ 流程控制
             td(rowspan="1") 巢狀迴圈
-            td(rowspan="1") 字元和字串(c)／字串常用函數
+            td(rowspan="1") 字元和字串／字串常用函數
             td(rowspan="1") 多維陣列
             td(rowspan="1") 自訂函數／變數 scope
             td(rowspan="1") 遞迴
