@@ -18,7 +18,7 @@ div
       template
         AboutApcs
 
-    Section(:sectionId="\"aboutus\"" :sectionName="\"關於活動\"")
+    Section(:sectionId="\"aboutus\"" :sectionName="\"關於我們\"")
       template
         AboutUs
 
