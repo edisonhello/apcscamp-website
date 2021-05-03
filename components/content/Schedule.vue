@@ -1,9 +1,104 @@
 <template lang="pug">
   .container
-    div.img
-      img(src="/schedule1.png")
-    div.img
-      img(src="/schedule2.png")
+    h2 語法班
+    .dates
+      table
+          tr
+            th
+            th 8/02 (一)
+            th 8/03 (二)
+            th 8/04 (三)
+            th 8/05 (四)
+            th 8/06 (五)
+            th 8/09 (一)
+            th 8/10 (二)
+            th 8/11 (三)
+            th 8/12 (四)
+            th 8/13 (五)
+          tr
+            td 08:30~09:00
+            td(rowspan="1") 報到 / 集合
+            td(colspan="9") 集合
+          tr
+            td 09:00~10:40
+            td(rowspan="1") 課程和系統介紹 ／ 環境設定
+            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制(if, while)
+            td(rowspan="1") 進階迴圈(for) ／ 流程控制(continue,break)
+            td(rowspan="1") 巢狀迴圈
+            td(rowspan="1") 一維陣列
+            td(rowspan="1") 多維陣列
+            td(rowspan="1") 內建函數與函數呼叫
+            td(rowspan="1") 遞迴
+            td(rowspan="1") 結構 ／ 總複習
+            td(rowspan="3") 程式設計模擬考(2.5h) ／ 講解
+          tr
+            td 10:40~10:50
+            td(colspan="9") 下課
+          tr
+            td 10:50~12:30
+            td(rowspan="1") 變數與資料型態 ／ 輸入輸出 ／ 運算式
+            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制(if, while)
+            td(rowspan="1") 進階迴圈(for) ／ 流程控制(continue,break)
+            td(rowspan="1") 巢狀迴圈
+            td(rowspan="1") 字元和字串(c)／字串常用函數
+            td(rowspan="1") 多維陣列
+            td(rowspan="1") 自訂函數／變數 scope
+            td(rowspan="1") 遞迴
+            td(rowspan="1") debug 流程與技巧
+          tr
+            td 13:30~15:00
+            td(rowspan="1" colspan="9") 助教時間
+            td(rowspan="1")
+    h2 算法班
+    .dates
+      table
+          tr
+            th
+            th 8/02 (一)
+            th 8/03 (二)
+            th 8/04 (三)
+            th 8/05 (四)
+            th 8/06 (五)
+            th 8/09 (一)
+            th 8/10 (二)
+            th 8/11 (三)
+            th 8/12 (四)
+            th 8/13 (五)
+          tr
+            td 10:30~12:00
+            td(colspan="1")
+            td(colspan="9") 助教時間
+          tr
+            td 13:00~13:30
+            td(rowspan="1") 報到 / 集合
+            td(colspan="9") 集合 
+          tr
+            td 13:30~15:10
+            td(colspan="1") 實作技巧
+            td(colspan="1") 圖論（一）
+            td(colspan="1") 圖論（三）
+            td(colspan="1") 枚舉（一）
+            td(colspan="1") 枚舉（三）
+            td(colspan="1") 貪心（一）
+            td(colspan="1") 貪心（三）
+            td(colspan="1") 分治（二）
+            td(colspan="1") 動態規劃（一）
+            td(colspan="1") 動態規劃（三）
+          tr
+            td 15:20~15:30
+            td(colspan="10") 下課
+          tr
+            td 15:30~17:00
+            td(colspan="1") 時間複雜度
+            td(colspan="1") 圖論（二）
+            td(colspan="1") 圖論（四）
+            td(colspan="1") 枚舉（二）
+            td(colspan="1") 枚舉（四）
+            td(colspan="1") 貪心（二）
+            td(colspan="1") 分治（一）
+            td(colspan="1") 分治（三）
+            td(colspan="1") 動態規劃（二）
+            td(colspan="1") 動態規劃（四）
 </template>
 
 <script lang="ts">
