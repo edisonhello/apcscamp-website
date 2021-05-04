@@ -34,7 +34,9 @@ export default Vue.extend({
   padding-top: 15vh;
   padding-bottom: 20px;
   text-align: center;
-  height: calc(80vh - 20px);
+  min-height: calc(85vh - 70px);
+  height: calc(85vh - 70px);
+
   img {
     max-width: 200px;
     margin: 10px;
