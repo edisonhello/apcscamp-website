@@ -19,7 +19,7 @@
         template(v-slot:title) 算法班
         div
           ul
-            li 實作技巧（包括 bitwise operation...）
+            li STL 資料結構（vector, stack, queue, set, map, heap）
             li 時間複雜度（time complexity）
             li 二分搜尋法（binary search）
             li 圖論（graph theory）

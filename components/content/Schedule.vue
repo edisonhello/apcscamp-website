@@ -74,14 +74,14 @@
             td(colspan="9") 集合 
           tr
             td 13:30~15:10
-            td(colspan="1") 實作技巧
+            td(colspan="1") 時間複雜度
+            td(colspan="1") 資料結構（二）
+            td(colspan="1") 枚舉（二）
+            td(colspan="1") 枚舉（四）
+            td(colspan="1") 貪心（二）
             td(colspan="1") 圖論（一）
             td(colspan="1") 圖論（三）
-            td(colspan="1") 枚舉（一）
-            td(colspan="1") 枚舉（三）
-            td(colspan="1") 貪心（一）
-            td(colspan="1") 貪心（三）
-            td(colspan="1") 分治（二）
+            td(colspan="1") 分治（一）
             td(colspan="1") 動態規劃（一）
             td(colspan="1") 動態規劃（三）
           tr
@@ -89,14 +89,14 @@
             td(colspan="10") 下課
           tr
             td 15:30~17:00
-            td(colspan="1") 時間複雜度
+            td(colspan="1") 資料結構（一）
+            td(colspan="1") 枚舉（一）
+            td(colspan="1") 枚舉（三）
+            td(colspan="1") 貪心（一）
+            td(colspan="1") 貪心（三）
             td(colspan="1") 圖論（二）
             td(colspan="1") 圖論（四）
-            td(colspan="1") 枚舉（二）
-            td(colspan="1") 枚舉（四）
-            td(colspan="1") 貪心（二）
-            td(colspan="1") 分治（一）
-            td(colspan="1") 分治（三）
+            td(colspan="1") 分治（二）
             td(colspan="1") 動態規劃（二）
             td(colspan="1") 動態規劃（四）
 </template>
