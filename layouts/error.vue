@@ -31,9 +31,12 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .container {
-  padding-top: $nav-header-space + 20px;
+  padding-top: 15vh;
   padding-bottom: 20px;
   text-align: center;
+  min-height: calc(85vh - 70px);
+  height: calc(85vh - 70px);
+
   img {
     max-width: 200px;
     margin: 10px;

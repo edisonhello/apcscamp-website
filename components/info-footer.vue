@@ -5,8 +5,13 @@ footer
 
 <style lang="scss" scoped>
 footer {
+
+  clear: both; 
+  position: relative;
   background-color: $footer-color;
-  min-height: 5vh;
+  min-height: 3vh;
+  margin-top: -3vh;
+
   padding: 30px 5vw 20px 5vw;
   color: #111111;
   a {
