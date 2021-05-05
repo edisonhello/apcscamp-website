@@ -124,6 +124,7 @@ export default {
       ]
     },
   },
+  mode: 'universal',
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
@@ -131,11 +132,11 @@ export default {
   build: {
     extractCSS: true,
     transpile: ['@nuxtjs/auth'],
-    babel:{
-    plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }]
-      ]
-    },
+    // babel:{
+    //   plugins: [
+    //     ['@babel/plugin-proposal-private-methods', { loose: true }]
+    //   ]
+    // },
   },
   /*
   ** Router Configureation
