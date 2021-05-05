@@ -21,12 +21,12 @@
           "link": "#information"
         },
         {
-          "name": "活動日程",
-          "link": "#schedule"
-        },
-        {
           "name": "課程安排",
           "link": "#courses"
+        },
+        {
+          "name": "活動日程",
+          "link": "#schedule"
         }
       ]
     },

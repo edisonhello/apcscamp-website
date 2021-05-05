@@ -26,13 +26,14 @@ div
       template
         Information
 
+    Section(:sectionId="\"courses\"" :sectionName="\"課程內容\"")
+      template
+        Courses
+
     Section(:sectionId="\"schedule\"" :sectionName="\"上課日程\"")
       template
         Schedule
 
-    Section(:sectionId="\"courses\"" :sectionName="\"課程內容\"")
-      template
-        Courses
 
     //- Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
     //-   template
