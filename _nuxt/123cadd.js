@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{313:function(t,e,n){"use strict";n.r(e);var c=n(0).a.extend({fetch:function(){this.$auth.logout(),this.$router.back()}}),o=n(15),component=Object(o.a)(c,(function(){var t=this.$createElement;return(this._self._c||t)("div")}),[],!1,null,null,null);e.default=component.exports}}]);
