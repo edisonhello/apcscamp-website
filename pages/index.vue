@@ -14,6 +14,10 @@ div
     //-   :key="article.id"
     //- )
 
+    Section(:sectionId="\"\"" :sectionName="\"最新消息\"")
+      template
+        News
+
     Section(:sectionId="\"aboutapcs\"" :sectionName="\"關於 APCS\"")
       template
         AboutApcs
