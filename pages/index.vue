@@ -35,17 +35,17 @@ div
         Schedule
 
 
-    //- Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
-    //-   template
-    //-     Teachers
+    Section(:sectionId="\"teachers\"" :sectionName="\"師資陣容\"")
+      template
+        Teachers
 
     Section(:sectionId="\"contacts\"" :sectionName="\"聯絡我們\"")
       template
         Contacts
 
-    //- Section(:sectionId="\"register\"" :sectionName="\"立即報名\"")
-    //-   template
-    //-     Register
+    Section(:sectionId="\"register\"" :sectionName="\"立即報名\"")
+      template
+        Register
 </template>
 
 <script>

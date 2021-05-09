@@ -1,8 +1,7 @@
 <template lang="pug">
   div
-    p 報名請戳
-      a(href="https://apcs.camp") 這裡
-      | owo
+    p 
+    a(href="https://forms.gle/T576PcJyKSoJR2HL9") 報名表單連結
 </template>
 
 <script>
