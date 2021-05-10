@@ -17,9 +17,6 @@
 <script>
 import Vue from "vue";
 export default Vue.extend({
-  head: {
-    title: "師資陣容",
-  },
   data() {
     return {
       teachers: [],
