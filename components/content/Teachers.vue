@@ -48,6 +48,8 @@ export default Vue.extend({
       background-color: white;
       padding: 20px 20px;
       margin: 20px 0;
+      box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.2);
+
       @include with-mobile {
         padding: 5px 10px;
       }
