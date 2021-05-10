@@ -2,7 +2,7 @@
   .container 
     .courses
       section-block.course(:contentShadow="true")
-        template(v-slot:title) 語法班
+        template(v-slot:title) 語法班（C/C++）
         div
           ul
             li 課程介紹和線上系統介紹
