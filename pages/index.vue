@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   .cover#cover
-    img(src="/cover.png")
+    img(src="/cover2.png")
   nav-header.header.fixed-header#navbar(
     :bgOpacity="navbarBgOpacity"
   )
@@ -158,13 +158,20 @@ export default Vue.extend({
   // margin-bottom: 2vw;
   width: 100vw;
   max-width: 100%;
-  max-height: 100vh;
+  // max-height: 100vh;
+
+  z-index: -1000;
   // max-height: 100vw - #{$nav-header-height};
 
   img {
     width: 100%;
     height: 100%;
+    max-height: 100%;
+    max-width: 100%;
     display: block;
+    overflow-y: hidden;
+
+    z-index: -1000;
   }
 }
 
