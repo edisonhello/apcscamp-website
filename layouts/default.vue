@@ -5,6 +5,17 @@
   info-footer
 </template>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-197163404-1">
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'UA-197163404-1');
+</script>
+
 <script>
 import Vue from 'vue'
 
@@ -15,20 +26,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .background {
-  // background-color: $default-background-color;
-  // min-height: 100vh;
-  // background-image: linear-gradient(
-  //     rgba(0, 0, 0, 0.25),
-  //     rgba(0, 0, 0, 0.25)
-  //   ), url('/background.png');
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-size: cover;
   background-color: #373092;
 }
-// #base {
-//   min-height: 94vh;
-// }
 </style>
 
 <style lang="scss">
