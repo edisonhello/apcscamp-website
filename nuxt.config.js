@@ -30,6 +30,12 @@ export default {
     htmlAttrs: {
       lang: 'zh-TW',
     },
+    script: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=UA-197163404-1",
+        async: true,
+      }
+    ],
   },
   /*
   ** Global CSS

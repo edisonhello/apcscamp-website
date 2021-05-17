@@ -5,9 +5,6 @@
   info-footer
 </template>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-197163404-1">
-</script>
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
