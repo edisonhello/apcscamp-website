@@ -66,6 +66,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/fontawesome',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-analytics',
   ],
   /*
   ** Nuxt.js modules
@@ -95,6 +96,9 @@ export default {
       'Noto+Serif+TC': [300,600,700],
     },
     display: 'swap',
+  },
+  googleAnalytics: {
+    id: 'UA-197163404-1',
   },
   /*
    ** FontAwesome module configuration
