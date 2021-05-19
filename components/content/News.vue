@@ -3,8 +3,11 @@
     p 最新消息和 FAQ 都會跟新在這裡喔！
     h3 最新消息
     ul
-      li 報名開始摟！請點
-        a(href="#register") 這裡
+      li （05/19 更新）感謝贊助商，同步班／非同步班的報名費已調降至 7500／5900！
+      li （05/19 更新）感謝贊助商，我們決定推出團報優惠！詳情請參考
+        a(href="#information") 這裡
+      li （05/10 更新）報名開始摟！請點
+        a(href="https://forms.gle/T576PcJyKSoJR2HL9") 這裡
     h3 FAQ
     ul
       li 營隊資源可以存取多久？
