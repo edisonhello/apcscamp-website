@@ -10,6 +10,9 @@
         a(href="#register") 「立即報名」
     h3 FAQ
     ul
+      li 預計使用哪些線上平台？
+      ul
+        li 請參考 <a href="#information">「營隊資訊」</a>
       li 營隊資源可以存取多久？
         ul
           li 課程錄影、題目和線上評測系統都會開放到營隊結束後第二次的 APCS 考試以前
