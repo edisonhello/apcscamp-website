@@ -27,6 +27,9 @@
             li 貪心（greedy）
             li 分治（divide and conquer）
             li 動態規劃（dynamic programming）
+    div
+      ul
+        li 更詳細的內容可以參考 <a href="https://drive.google.com/file/d/1qxszwhuJLJMGgpoMYjvpGtIstJQpP0Vf/view?usp=sharing">這裡</a>
       //-
         section-block.course(v-for="course in courses", :key="course.slug" :contentShadow="true")
           template(v-slot:title) {{ course.name }}
