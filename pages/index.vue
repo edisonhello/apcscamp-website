@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   .cover#cover
-    img(src="/cover2.png")
+    img(src="/bannar-v2-09.png")
   nav-header.header.fixed-header#navbar(
     :bgOpacity="navbarBgOpacity"
   )
