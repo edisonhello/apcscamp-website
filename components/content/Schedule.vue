@@ -41,7 +41,7 @@
             td(rowspan="1") 進階迴圈 ／ 流程控制
             td(rowspan="1") 巢狀迴圈
             td(rowspan="1") 字元和字串／字串常用函數
-            td(rowspan="1") 多維陣列
+            td(rowspan="1") 指標／多維陣列
             td(rowspan="1") 自訂函數／變數 scope
             td(rowspan="1") 遞迴
             td(rowspan="1") debug 流程與技巧
