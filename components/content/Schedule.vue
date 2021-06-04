@@ -88,7 +88,7 @@
             td 15:20~15:30
             td(colspan="10") 下課
           tr
-            td 15:30~17:00
+            td 15:30~17:10
             td(colspan="1") 資料結構（一）
             td(colspan="1") 枚舉（一）
             td(colspan="1") 枚舉（三）
