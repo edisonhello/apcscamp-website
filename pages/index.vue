@@ -18,6 +18,10 @@ div
       template
         News
 
+    Section(:sectionId="\"sponsors\"" :sectionName="\"贊助廠商\"")
+      template
+        Sponsors
+
     Section(:sectionId="\"aboutapcs\"" :sectionName="\"關於 APCS\"")
       template
         AboutApcs
