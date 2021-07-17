@@ -2,16 +2,6 @@
   .container 
     .courses
       section-block.course(:contentShadow="true")
-        template(v-slot:title) Line
-        div.section
-          div.text-section
-            h3 公司網站
-            a(href="http://linecorp.com/zh-hant/") http://linecorp.com/zh-hant/
-            h3 公司簡介
-            p 總部位於日本的LINE以「拉近你我的距離」為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。欲瞭解更多資訊，請瀏覽官方網站：http://linecorp.com/zh-hant/。
-          div.icon-section
-            img(src="/line.png").icon
-      section-block.course(:contentShadow="true")
         template(v-slot:title) Conflux
         div.section
           div.text-section
@@ -21,6 +11,16 @@
             p 成立於 2018 年的世界級公鏈 Conflux，由唯一華人圖靈獎得主姚期智先生作為首席科学家，擁有區塊鏈行業內最頂尖的理論和研發團隊，核心團隊源于清華“姚班”及麻省理工、卡內基梅隆大學、清華大學、多倫多大學等知名學府。其中多名成員曾斬獲國際資訊學奧林匹克競賽（IOI）金牌及 ACM-ICPC 程式設計競賽金牌等殊榮。Conflux 使用自主研發的樹圖結構可擴容的共識算法，在不犧牲任何去中心化程度的情況下，實現了 3000~ 6000 TPS 的高吞吐量。在2020年主網上線至今累積遍及全球的廣大用戶、開發者與豐富的生態項目。粉專：https://www.facebook.com/ConfluxTW；官方line社群：https://pse.is/3cd3cp。
           div.icon-section
             img(src="/conflux.png").icon
+      section-block.course(:contentShadow="true")
+        template(v-slot:title) Line
+        div.section
+          div.text-section
+            h3 公司網站
+            a(href="http://linecorp.com/zh-hant/") http://linecorp.com/zh-hant/
+            h3 公司簡介
+            p 總部位於日本的LINE以「拉近你我的距離」為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。欲瞭解更多資訊，請瀏覽官方網站：http://linecorp.com/zh-hant/。
+          div.icon-section
+            img(src="/line.png").icon
       section-block.course(:contentShadow="true")
         template(v-slot:title) 蝦皮購物
         div.section
