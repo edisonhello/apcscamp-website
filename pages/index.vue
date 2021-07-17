@@ -18,7 +18,7 @@ div
       template
         News
 
-    Section(:sectionId="\"sponsors\"" :sectionName="\"贊助廠商\"")
+    Section(:sectionId="\"sponsors\"" :sectionName="\"贊助夥伴\"")
       template
         Sponsors
 
