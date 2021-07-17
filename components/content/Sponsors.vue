@@ -66,10 +66,9 @@ p {
   }
 
   .icon-section {
-    width: 20%;
     max-width: 20%;
-    min-width: 20%;
     display: inline-block;
+    text-align: center;
 
     .icon {
       max-width: 100%;
