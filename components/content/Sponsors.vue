@@ -8,7 +8,7 @@
             h3 公司網站
             a(href="https://www.facebook.com/ConfluxTW") https://www.facebook.com/ConfluxTW
             h3 公司簡介
-            p 成立於 2018 年的世界級公鏈 Conflux，由唯一華人圖靈獎得主姚期智先生作為首席科学家，擁有區塊鏈行業內最頂尖的理論和研發團隊，核心團隊源于清華“姚班”及麻省理工、卡內基梅隆大學、清華大學、多倫多大學等知名學府。其中多名成員曾斬獲國際資訊學奧林匹克競賽（IOI）金牌及 ACM-ICPC 程式設計競賽金牌等殊榮。Conflux 使用自主研發的樹圖結構可擴容的共識算法，在不犧牲任何去中心化程度的情況下，實現了 3000~ 6000 TPS 的高吞吐量。在2020年主網上線至今累積遍及全球的廣大用戶、開發者與豐富的生態項目。粉專：https://www.facebook.com/ConfluxTW；官方line社群：https://pse.is/3cd3cp。
+            p 成立於 2018 年的世界級公鏈 Conflux，擁有區塊鏈行業內最頂尖的理論和研發團隊，核心團隊源于清華“姚班”及麻省理工、卡內基梅隆大學、清華大學、多倫多大學等知名學府。其中多名成員曾斬獲國際資訊學奧林匹克競賽（IOI）金牌及 ACM-ICPC 程式設計競賽金牌等殊榮。Conflux 使用自主研發的樹圖結構可擴容的共識算法，在不犧牲任何去中心化程度的情況下，實現了 3000~ 6000 TPS 的高吞吐量。在2020年主網上線至今累積遍及全球的廣大用戶、開發者與豐富的生態項目。粉專：https://www.facebook.com/ConfluxTW；官方line社群：https://pse.is/3cd3cp。
           div.icon-section
             img(src="/conflux.png").icon
       section-block.course(:contentShadow="true")
