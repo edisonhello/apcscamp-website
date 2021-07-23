@@ -12,7 +12,7 @@
           div.icon-section
             img(src="/conflux.png").icon
       section-block.course(:contentShadow="true")
-        template(v-slot:title) Line
+        template(v-slot:title) LINE
         div.section
           div.text-section
             h3 公司網站
@@ -20,7 +20,7 @@
             h3 公司簡介
             p 總部位於日本的LINE以「拉近你我的距離」為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。欲瞭解更多資訊，請瀏覽官方網站：http://linecorp.com/zh-hant/。
           div.icon-section
-            img(src="/line.png").icon
+            img(src="/line.png" style="width: 60%;").icon
       section-block.course(:contentShadow="true")
         template(v-slot:title) 蝦皮購物
         div.section
