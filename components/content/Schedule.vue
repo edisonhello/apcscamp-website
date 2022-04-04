@@ -5,16 +5,16 @@
       table
           tr
             th
-            th 8/02 (一)
-            th 8/03 (二)
-            th 8/04 (三)
-            th 8/05 (四)
-            th 8/06 (五)
-            th 8/09 (一)
-            th 8/10 (二)
-            th 8/11 (三)
-            th 8/12 (四)
-            th 8/13 (五)
+            th 8/01 (一)
+            th 8/02 (二)
+            th 8/03 (三)
+            th 8/04 (四)
+            th 8/05 (五)
+            th 8/08 (一)
+            th 8/09 (二)
+            th 8/10 (三)
+            th 8/11 (四)
+            th 8/12 (五)
           tr
             td 08:30~09:00
             td(rowspan="1") 報到 / 集合
@@ -22,7 +22,7 @@
           tr
             td 09:00~10:40
             td(rowspan="1") 課程和系統介紹 ／ 環境設定
-            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制
+            td(rowspan="1") 條件式（邏輯運算） ／ 迴圈與流程控制
             td(rowspan="1") 進階迴圈 ／ 流程控制
             td(rowspan="1") 巢狀迴圈
             td(rowspan="1") 一維陣列
@@ -30,18 +30,18 @@
             td(rowspan="1") 內建函數與函數呼叫
             td(rowspan="1") 遞迴
             td(rowspan="1") 結構 ／ 總複習
-            td(rowspan="3") 程式設計模擬考(2.5h) ／ 講解
+            td(rowspan="3") 程式設計模擬考（2.5h） ／ 講解
           tr
             td 10:40~10:50
             td(colspan="9") 下課
           tr
             td 10:50~12:30
             td(rowspan="1") 變數與資料型態 ／ 輸入輸出 ／ 運算式
-            td(rowspan="1") 條件式(邏輯運算) ／ 迴圈與流程控制
+            td(rowspan="1") 條件式（邏輯運算） ／ 迴圈與流程控制
             td(rowspan="1") 進階迴圈 ／ 流程控制
             td(rowspan="1") 巢狀迴圈
             td(rowspan="1") 字元和字串／字串常用函數
-            td(rowspan="1") 多維陣列
+            td(rowspan="1") 指標／多維陣列
             td(rowspan="1") 自訂函數／變數 scope
             td(rowspan="1") 遞迴
             td(rowspan="1") debug 流程與技巧
@@ -54,16 +54,16 @@
       table
           tr
             th
-            th 8/02 (一)
-            th 8/03 (二)
-            th 8/04 (三)
-            th 8/05 (四)
-            th 8/06 (五)
-            th 8/09 (一)
-            th 8/10 (二)
-            th 8/11 (三)
-            th 8/12 (四)
-            th 8/13 (五)
+            th 8/01 (一)
+            th 8/02 (二)
+            th 8/03 (三)
+            th 8/04 (四)
+            th 8/05 (五)
+            th 8/08 (一)
+            th 8/09 (二)
+            th 8/10 (三)
+            th 8/11 (四)
+            th 8/12 (五)
           tr
             td 10:30~12:00
             td(colspan="1")
@@ -79,24 +79,23 @@
             td(colspan="1") 枚舉（二）
             td(colspan="1") 枚舉（四）
             td(colspan="1") 貪心（二）
-            td(colspan="1") 圖論（一）
-            td(colspan="1") 圖論（三）
-            td(colspan="1") 分治（一）
+            td(colspan="1") 圖論（二）
+            td(colspan="1") 圖論（四）
             td(colspan="1") 動態規劃（一）
             td(colspan="1") 動態規劃（三）
+            td(rowspan="3") 程式設計模擬考（2.5h） ／ 講解
           tr
             td 15:20~15:30
-            td(colspan="10") 下課
+            td(colspan="9") 下課
           tr
             td 15:30~17:00
             td(colspan="1") 資料結構（一）
             td(colspan="1") 枚舉（一）
             td(colspan="1") 枚舉（三）
             td(colspan="1") 貪心（一）
-            td(colspan="1") 貪心（三）
-            td(colspan="1") 圖論（二）
-            td(colspan="1") 圖論（四）
-            td(colspan="1") 分治（二）
+            td(colspan="1") 圖論（一）
+            td(colspan="1") 圖論（三）
+            td(colspan="1") 分治
             td(colspan="1") 動態規劃（二）
             td(colspan="1") 動態規劃（四）
 </template>

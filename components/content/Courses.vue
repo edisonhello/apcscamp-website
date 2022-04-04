@@ -11,6 +11,7 @@
             li 輸入輸出（cin, cout）
             li 運算式、條件式
             li 迴圈與流程控制（if, while, for, continue, break）、巢狀迴圈
+            li 指標
             li 一維與多維陣列、字元與字串（c style）、字串常用函數
             li 內建函數與函數呼叫、自訂函數
             li 遞迴（recursion）
