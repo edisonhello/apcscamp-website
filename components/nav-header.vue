@@ -195,16 +195,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$nav-bg-color: #726ebb;
-$nav-bg-color-mob: #726ebb;
-$nav-pop-bg-color-mob: #6b67b6;
-$nav-item-text: #fff;
-$nav-item-hover-bg: #58549b;
-$nav-item-hover-text: #87dff5;
-$nav-item-active-bg: #615db9;
-$nav-item-active-text: #5addfd;
-$nav-item-active-text-mob: #5addfd;
-$nav-link-hover-text: #726ebb;
+$nav-bg-color: #4a4a4a;
+$nav-bg-color-mob: #4a4a4a;
+$nav-pop-bg-color-mob: #4a4a4a;
+$nav-item-text: white;
+$nav-item-hover-bg: #ffe27b;
+$nav-item-hover-text: #636363;
+$nav-item-active-bg: #ffd745;
+$nav-item-active-text: #4a4a4a;
+$nav-item-active-text-mob: white;
+$nav-link-hover-text: #ffd745;
 
 
 $skew: -10deg;

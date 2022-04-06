@@ -13,9 +13,9 @@ footer {
   margin-top: -3vh;
 
   padding: 30px 5vw 20px 5vw;
-  color: #111111;
+  color: white;
   a {
-    color: #111111;
+    color: white;
   }
 }
 </style>

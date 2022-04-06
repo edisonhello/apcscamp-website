@@ -23,7 +23,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .background {
-  background-color: #373092;
+  background-color: #64c397;
 }
 </style>
 
