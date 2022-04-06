@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    p 最新消息和 FAQ 都會跟新在這裡喔！
+    p 最新消息和 FAQ 都會更新在這裡喔！
     h3 最新消息
     ul
       li 報名開始囉！請點
