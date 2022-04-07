@@ -26,6 +26,7 @@ export default {
       { hid: 'og:title', name: 'og:titlte', property: 'og:title', content: 'APCSCamp 2022 程式設計能力培訓營' },
       { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://apcs.camp' },
       { hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://apcs.camp/icon.png' },
+      { hid: 'og:updated_time', name: 'og:updated_time', property: 'og:updated_time', content: '1649353994' },
     ],
     htmlAttrs: {
       lang: 'zh-TW',
