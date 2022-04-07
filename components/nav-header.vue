@@ -201,10 +201,10 @@ $nav-pop-bg-color-mob: #4a4a4a;
 $nav-item-text: white;
 $nav-item-hover-bg: #ffe27b;
 $nav-item-hover-text: #636363;
-$nav-item-active-bg: #ffd745;
+$nav-item-active-bg: #ffd800;
 $nav-item-active-text: #4a4a4a;
 $nav-item-active-text-mob: white;
-$nav-link-hover-text: #ffd745;
+$nav-link-hover-text: #ffd800;
 
 
 $skew: -10deg;
