@@ -85,10 +85,10 @@
             td(colspan="1") 動態規劃（三）
             td(rowspan="3") 程式設計模擬考（2.5h） ／ 講解
           tr
-            td 15:20~15:30
+            td 15:10~15:20
             td(colspan="9") 下課
           tr
-            td 15:30~17:00
+            td 15:20~17:00
             td(colspan="1") 資料結構（一）
             td(colspan="1") 枚舉（一）
             td(colspan="1") 枚舉（三）
