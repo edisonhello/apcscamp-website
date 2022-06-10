@@ -81,8 +81,8 @@
             td(colspan="1") 貪心（二）
             td(colspan="1") 圖論（二）
             td(colspan="1") 圖論（四）
-            td(colspan="1") 動態規劃（一）
-            td(colspan="1") 動態規劃（三）
+            td(colspan="1") 分治（二）
+            td(colspan="1") 動態規劃（二）
             td(rowspan="3") 程式設計模擬考（2.5h） ／ 講解
           tr
             td 15:10~15:20
@@ -95,9 +95,9 @@
             td(colspan="1") 貪心（一）
             td(colspan="1") 圖論（一）
             td(colspan="1") 圖論（三）
-            td(colspan="1") 分治
-            td(colspan="1") 動態規劃（二）
-            td(colspan="1") 動態規劃（四）
+            td(colspan="1") 分治（一）
+            td(colspan="1") 動態規劃（一）
+            td(colspan="1") 動態規劃（三）
 </template>
 
 <script lang="ts">
