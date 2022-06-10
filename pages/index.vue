@@ -14,6 +14,9 @@ div
     //-   :key="article.id"
     //- )
 
+    div(class='video-container')
+      iframe(class="iframe-container" src="https://www.youtube.com/embed/4f5YftoThJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
     Section(:sectionId="\"\"" :sectionName="\"最新消息\"")
       template
         News
@@ -179,4 +182,22 @@ export default Vue.extend({
   }
 }
 
+.video-container:before {
+  content: '';
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.video-container {
+  position: relative;
+  margin: 0 auto 20px;
+  max-width: 700px;
+}
+.iframe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
