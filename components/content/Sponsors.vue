@@ -1,11 +1,36 @@
 <template lang="pug">
   .container 
     .courses
-    ul
-      li 舉辦一場有內容的培訓並非一件輕鬆的事情。為了能夠在短時間內傳授各主題的精華，各講師必須於忙碌之中抽空編纂講義；為了能夠提供學員一個適當的練習的地方，評測系統也必須重新撰寫；而為了能夠提供完整、嚴謹、和教學的內容呼應的練習題，我們必須請人出題、交叉檢驗、難度調配。這些使得成本變得高昂，完成的難度也跟著增高。
-      li 除了努力，我們仍然需要許多外界的援助才能將活動辦得更好。如果您認同我們的理念，也希望能夠幫助更多志於程式設計的人，那麼請務必
-        a(href="#contacts") 聯絡我們
-        | ，與我們一起努力將這場培訓辦得盡善盡美。
+      section-block.course(:contentShadow="true")
+        template(v-slot:title) 微軟
+        div.section
+          div.text-section
+            h3 公司網站
+            a(href="http://aka.ms/joinmstw") http://aka.ms/joinmstw
+            h3 關於微軟
+            p 微軟（納斯達克上市代碼︰MSFT）致力於發展 Intelligent Cloud 與 Intelligent Edge 時代的數位轉型，其使命是賦能地球上的每一個人和每一個組織，都能實現更多、成就非凡。 
+          div.icon-section
+            img(src="/Microsoft.png").icon
+      section-block.course(:contentShadow="true")
+        template(v-slot:title) 統一證券
+        div.section
+          div.text-section
+            h3 公司網站
+            a(href="https://www.pscnet.com.tw/pscnetStock/index.do") https://www.pscnet.com.tw/pscnetStock/index.do
+            h3 關於統一證券
+            p 統一證券事業群涵括投顧、投信、期貨等轉投資公司，2021 年 EPS 為 2.75，經營績效卓著。2022 年榮獲《財訊》財富管理大獎獲得「最佳客戶推薦」、「最佳公益推動」及「最佳影音行銷」獎項，未來朝向成為國內標竿的證券品牌邁進。
+          div.icon-section
+            img(src="/統一證券1.png").icon
+      section-block.course(:contentShadow="true")
+        template(v-slot:title) YTP
+        div.section
+          div.text-section
+            h3 計畫網站
+            a(href="https://www.tw-ytp.org/") https://www.tw-ytp.org/
+            h3 關於 Young Turing Program 少年圖靈計畫
+            p 以電腦科學之父—艾倫．圖靈（Alan Turing）為名，Young Turing Program 少年圖靈計畫的成立，著眼於發掘年輕的軟體人才，透過程式競賽、專題實做、大學教授指導、企業志工導師輔導、海外參訪學習，啟發台灣學生對程式設計的興趣及熱誠，引導學生運用軟體力解決社會問題，或改善現況，進一步突破跟隨歐美制定標準的框架，勇於創新、創業，為台灣培育優秀軟體人才，提升台灣軟體產業的高度，建立台灣的軟體國力。
+          div.icon-section
+            img(src="/YTP.png").icon
     .cutter
 </template>
 <script>
