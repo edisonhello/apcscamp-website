@@ -1,80 +1,131 @@
 <template lang="pug">
-  .container 
-    .courses
-      section-block.course(:contentShadow="true")
-        template(v-slot:title) 微軟
-        div.section
-          div.text-section
-            h3 公司網站
-            a(href="http://aka.ms/joinmstw") http://aka.ms/joinmstw
-            h3 關於微軟
-            p 微軟（納斯達克上市代碼︰MSFT）致力於發展 Intelligent Cloud 與 Intelligent Edge 時代的數位轉型，其使命是賦能地球上的每一個人和每一個組織，都能實現更多、成就非凡。 
-          div.icon-section
-            img(src="/Microsoft.png").icon
-      section-block.course(:contentShadow="true")
-        template(v-slot:title) 統一證券
-        div.section
-          div.text-section
-            h3 公司網站
-            a(href="https://www.pscnet.com.tw/pscnetStock/index.do") https://www.pscnet.com.tw/pscnetStock/index.do
-            h3 關於統一證券
-            p 統一證券事業群涵括投顧、投信、期貨等轉投資公司，2021 年 EPS 為 2.75，經營績效卓著。2022 年榮獲《財訊》財富管理大獎獲得「最佳客戶推薦」、「最佳公益推動」及「最佳影音行銷」獎項，未來朝向成為國內標竿的證券品牌邁進。
-          div.icon-section
-            img(src="/統一證券1.png").icon
-      section-block.course(:contentShadow="true")
-        template(v-slot:title) YTP
-        div.section
-          div.text-section
-            h3 計畫網站
-            a(href="https://www.tw-ytp.org/") https://www.tw-ytp.org/
-            h3 關於 Young Turing Program 少年圖靈計畫
-            p 以電腦科學之父—艾倫．圖靈（Alan Turing）為名，Young Turing Program 少年圖靈計畫的成立，著眼於發掘年輕的軟體人才，透過程式競賽、專題實做、大學教授指導、企業志工導師輔導、海外參訪學習，啟發台灣學生對程式設計的興趣及熱誠，引導學生運用軟體力解決社會問題，或改善現況，進一步突破跟隨歐美制定標準的框架，勇於創新、創業，為台灣培育優秀軟體人才，提升台灣軟體產業的高度，建立台灣的軟體國力。
-          div.icon-section
-            img(src="/YTP.png").icon
+  .container
+    .sponsors
+      .sponsor(v-for="sponsor in sponsors", :key="sponsor.slug")
+        .image
+          img(:src="sponsor.image")
+        .intro
+          h3.name {{ sponsor.name }}
+          h3.subtitle {{ sponsor.type }}連結
+          a(:href="sponsor.href") {{ sponsor.href }}
+          h3.subtitle {{ sponsor.introtitle }}
+          .introduction
+            ul(v-for="introduction in sponsor.introductions", :key="introduction")
+              li
+                span.introduction {{ introduction }}
     .cutter
 </template>
-<script>
-import Vue from 'vue';
 
+<script>
+import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      section: undefined,
+      orderBy: 'index',
+      sponsors: [],
     };
   },
   async fetch() {
-    this.section = await this.$content("aboutAPCS").fetch();
-    console.log(this.section);
+    this.sponsors = await this.$content("sponsors").fetch();
   },
-})
+});
 </script>
 
 <style lang="scss" scoped>
-p {
-  line-height: 1.8;
-}
 
-.section {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
+.container {
+  h1.title {
+    color: #ffe300;
+    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000;
 
-  .text-section {
-    width: 77%;
-    display: inline-block;
+    font-weight: 300;
   }
+  .sponsors {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    .sponsor {
+      display: flex;
+      background-color: white;
+      padding: 20px 20px;
+      margin: 20px 0;
+      box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.2);
 
-  .icon-section {
-    max-width: 20%;
-    display: inline-block;
-    text-align: center;
-
-    .icon {
-      max-width: 100%;
-      max-height: 100%;
+      @include with-mobile {
+        padding: 5px 10px;
+      }
+      .intro {
+        padding: 15px 20px;
+        .name {
+          font-size: 1.5em;
+          font-weight: 700;
+          color: #636363;
+        }
+        .subtitle {
+          color: #000000;
+        }
+        .introduction {
+          padding-left: 8px;
+          margin-top: 10px;
+          font-size: 1.1em;
+          & > ul {
+            padding: 0;
+            list-style: none;
+            & > li {
+              font-family: "Noto Serif TC", serif;
+              font-weight: 600;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+      .image {
+        &::before {
+          // vertical centering from
+          // http://csscoke.com/2018/08/21/css-vertical-align/
+          content: "";
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+        img {
+          max-width: 100%;
+          object-fit: contain;
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      &:first-of-type {
+        margin-top: 30px;
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        .image {
+          text-align: right;
+          width: 30%;
+        }
+        .intro {
+          width: 70%;
+        }
+      }
+      &:nth-child(even) {
+        flex-direction: row;
+        text-align: left;
+        .image {
+          text-align: left;
+          width: 30%;
+        }
+        .intro {
+          width: 70%;
+        }
+      }
     }
   }
+  .cutter {
+    height: 1px;
+  }
 }
-
 </style>

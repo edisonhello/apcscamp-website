@@ -31,4 +31,14 @@ a.pageAnchor {
     padding-top: -$mobile-nav-header-space;
   }
 }
+a:link, a:visited {
+  color: #64c397;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover, a:active{
+  color: #ffe36c;
+  background-color: transparent;
+  text-decoration: none;
+}
 </style>
