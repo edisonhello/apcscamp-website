@@ -41,4 +41,7 @@ a:hover, a:active{
   background-color: transparent;
   text-decoration: none;
 }
+a {
+  word-break: break-all;
+}
 </style>
