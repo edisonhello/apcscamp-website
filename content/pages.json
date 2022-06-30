@@ -45,6 +45,10 @@
     {
       "name": "立即報名",
       "link": "#register"
+    },
+    {
+      "name": "登入",
+      "link": "https://vip.apcs.camp"
     }
   ]
 }
