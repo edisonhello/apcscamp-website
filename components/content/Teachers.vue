@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .teachers
-      .teacher(v-for="teacher in teachers", :key="teacher.slug")
+      .teacher(v-for="teacher in orderedTeachers", :key="teacher.slug")
         .image
           img(:src="teacher.image")
         .intro
@@ -19,12 +19,23 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      orderBy: 'index',
       teachers: [],
     };
   },
   async fetch() {
     this.teachers = await this.$content("teachers").fetch();
+  },
+  computed: {
+    orderedTeachers: function () {
+      function compare(a, b) {
+        if (a.index < b.index)
+          return -1;
+        if (a.index > b.index)
+          return 1;
+        return 0;
+      }
+      return this.teachers.sort(compare);
+    }
   },
 });
 </script>
